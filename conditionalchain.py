@@ -10,7 +10,7 @@ import streamlit as st
 
 load_dotenv()
 
-model = ChatOpenAI()
+model = ChatOpenAI(model_name="gpt-4", api_key=st.secrets['api_key'], temperature=0)
 st.title("Sentiment Responder")
 parser = StrOutputParser()
 
